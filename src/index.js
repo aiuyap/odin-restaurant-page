@@ -4,28 +4,28 @@ import { menuPage } from "./menu";
 import { aboutPage } from "./about";
 
 homePage();
-document.getElementById("home-btn").style.borderBottom = "3px solid var(--main-color)";
+currentActive("home-btn");
 
 
 document.querySelector("#home-btn").addEventListener("click", () => {
     clearContent();
     homePage();
     clearStyle();
-    document.getElementById("home-btn").style.borderBottom = "3px solid var(--main-color)";
+    currentActive("home-btn");
 });
 
 document.querySelector("#menu-btn").addEventListener("click", () => {
     clearContent();
     menuPage();
     clearStyle();
-    document.getElementById("menu-btn").style.borderBottom = "3px solid var(--main-color)";
+    currentActive("menu-btn");
 });
 
 document.querySelector("#about-btn").addEventListener("click", () => {
     clearContent();
     aboutPage();
     clearStyle();
-    document.getElementById("about-btn").style.borderBottom = "3px solid var(--main-color)";
+    currentActive("about-btn");
 });
 
 function clearContent () {
@@ -36,4 +36,8 @@ function clearStyle () {
     document.getElementById("home-btn").removeAttribute("style");
     document.getElementById("menu-btn").removeAttribute("style");
     document.getElementById("about-btn").removeAttribute("style");
+}
+
+function currentActive (idStr) {
+    document.getElementById(idStr).style.borderBottom = "3px solid var(--main-color)";
 }
