@@ -1,8 +1,9 @@
 import "./styles.css";
 import { homePage } from "./home";
 import { menuPage } from "./menu";
+import { aboutPage } from "./about";
 
-// homePage();
+homePage();
 document.getElementById("home-btn").style.borderBottom = "3px solid var(--main-color)";
 
 
@@ -20,6 +21,13 @@ document.querySelector("#menu-btn").addEventListener("click", () => {
     document.getElementById("menu-btn").style.borderBottom = "3px solid var(--main-color)";
 });
 
+document.querySelector("#about-btn").addEventListener("click", () => {
+    clearContent();
+    aboutPage();
+    clearStyle();
+    document.getElementById("about-btn").style.borderBottom = "3px solid var(--main-color)";
+});
+
 function clearContent () {
     document.querySelector("#page-container").remove();
 }
@@ -27,4 +35,5 @@ function clearContent () {
 function clearStyle () {
     document.getElementById("home-btn").removeAttribute("style");
     document.getElementById("menu-btn").removeAttribute("style");
+    document.getElementById("about-btn").removeAttribute("style");
 }

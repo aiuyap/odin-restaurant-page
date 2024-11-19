@@ -99,7 +99,7 @@ p {
     width: 60%;
 }
 
-#page-container {
+#flex-div {
     display: flex;
     justify-content: center;
 }
