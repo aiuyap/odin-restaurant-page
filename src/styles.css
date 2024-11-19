@@ -30,19 +30,20 @@ header {
 
 button {
     width: 10rem;
-    height: 3rem;
-    font-size: 1.3rem;
+    height: 5rem;
+    font-size: 2rem;
     font-weight: 800;
     border: none;
     background-color: var(--secondary-color);
     color: var(--font-color);
     cursor: pointer;
     border-radius: 15px;
+    text-shadow: 2px 2px var(--main-color);
 }
 
 button:hover {
     background-color: var(--tertiary-color);
-}
+} 
 
 #content {
     height: 90vh;
@@ -88,4 +89,17 @@ p {
 #menu h3 {
     padding: 0px 5px;
     font-size: 2rem;
+}
+
+#about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 60%;
+}
+
+#page-container {
+    display: flex;
+    justify-content: center;
 }

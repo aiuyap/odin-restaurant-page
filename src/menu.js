@@ -1,9 +1,12 @@
 export const menuPage = () => {
     const divContent = document.querySelector("#content");
+    const pageContainer = document.createElement("div");
+    pageContainer.id = "page-container";
+    divContent.append(pageContainer);
 
     const menuContainer = document.createElement("div");
     menuContainer.id = "menu-container";
-    divContent.appendChild(menuContainer);
+    pageContainer.appendChild(menuContainer);
 
     const h1 = document.createElement("h1");
     h1.textContent = "Burger Menu";
@@ -35,7 +38,7 @@ export const menuPage = () => {
     generateH3().item("$6");
     generateH3().item("$11");
     
-}
+};
 
 function generateH3 () {
     const h3element = document.createElement("h3");
